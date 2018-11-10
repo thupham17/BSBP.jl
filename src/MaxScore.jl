@@ -1,6 +1,5 @@
 using MathProgBase, Gurobi
 using Distributions, DataFrames
-using Compat
 
 InputVector{T<:Union{Real,Char}} = Union{Vector{T},Real,Char}
 const SymbolInputVector = Union{Vector{Symbol},Symbol}
