@@ -3,3 +3,4 @@ Distributions
 MathProgBase
 Gurobi
 DataFrames
+Compat
