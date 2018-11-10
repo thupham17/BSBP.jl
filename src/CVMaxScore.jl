@@ -55,7 +55,7 @@ function CVMaxScore(tr_ind::AbstractArray,test_ind::AbstractArray,data::Abstract
         val_score[q]=val_score[q]/fold
     end
     best_q = maximum(val_score)
-    end
     return best_q, bhat,score,gap,rtime,ncount
+end
 
 export CVMaxScore
