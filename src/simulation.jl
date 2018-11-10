@@ -96,7 +96,6 @@ function Simulation(;warm_start=0,tau=1.5,mio=1,q=1,p=10,N=10,N_val=50,R=1,typ=1
         println(i)
 
         y,datax = simdata(N,beta,sigma,typ,seed)
-        println(y)
 
         try
             if warm_start == 1 # warm start MIO
