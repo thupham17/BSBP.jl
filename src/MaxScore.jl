@@ -1,5 +1,6 @@
 using MathProgBase, Gurobi
 using Distributions, DataFrames
+using Compat
 
 InputVector{T<:Union{Real,Char}} = Union{Vector{T},Real,Char}
 const SymbolInputVector = Union{Vector{Symbol},Symbol}
@@ -145,7 +146,7 @@ function MaxScore(y::AbstractArray,x_foc::AbstractArray,x_aux::AbstractArray,bet
     rtime = 0
     ncount = 0
 
-    miobnd=BSBP.MIObnd([x_foc x_aux],beta0,bnd)
+    miobnd=MIObnd([x_foc x_aux],beta0,bnd)
 
     #Set Params
     tol=0.000001
