@@ -1,4 +1,5 @@
-using MathProgBase
+using MathProgBase, Gurobi
+using Distributions, DataFrames
 
 """
 Computes the optimal q value via the cross validation procedure.
@@ -55,5 +56,6 @@ function CVMaxScore(tr_ind::AbstractArray,test_ind::AbstractArray,data::Abstract
     end
     best_q = maximum(val_score)
     end
+    return best_q, bhat,score,gap,rtime,ncount
 
 export CVMaxScore
